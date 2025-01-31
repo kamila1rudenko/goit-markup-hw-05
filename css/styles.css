@@ -444,10 +444,7 @@ display: flex;
     fill: #2e2f42;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close:hover,
-.close:focus {
-    fill: #ffffff
-}
+
 .modal-close {
     position: absolute;
     top: 24px;
@@ -468,6 +465,7 @@ display: flex;
 }
 .modal-close:hover, .modal-close:focus {
 background-color: #404bbf;
+fill: #ffffff;
 border: none;
 }
 .modal-title{
