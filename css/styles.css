@@ -442,6 +442,11 @@ display: flex;
 }
 .close {
     fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close:hover,
+.close:focus {
+    fill: #ffffff
 }
 .modal-close {
     position: absolute;
@@ -466,6 +471,7 @@ background-color: #404bbf;
 border: none;
 }
 .modal-title{
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -521,7 +527,6 @@ border: none;
     top: 50%;
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .modal-textarea {
     width: 100%;
