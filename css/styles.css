@@ -29,12 +29,14 @@ a {
     clip: rect(0 0 0 0);
     overflow: hidden;}
 .container {
-    width: 1158px;
-    padding: 0 15px;
+    width: 100%;
+    padding: 0 16px;
     margin: 0 auto;
         }
 img {
     display: block;
+    width: 100%;
+    height: auto;
      }
 .logo {
 font-family: "Raleway", sans-serif;
@@ -195,49 +197,51 @@ margin-bottom: 48px;
     background-color: #404bbf;
 
 }
-.scroll {
-font-weight: 500;
-font-size: 20px;
-line-height: 1.2;
-letter-spacing: 0.02em;
-color: #2e2f42;
-}
+
+
 .advatages {
- padding: 120px 0 120px 0
+ padding-top: 96px;
+ padding-bottom: 96px;
 }
 .advatages-scroll {
     margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
 }
 .advatages-list {
     display: flex;
-    gap: 24px;}
+    flex-wrap: wrap;
+    gap: 72px;
+}
+
 .advatages-item {
-    flex-basis: calc((100% - 72px) / 4);
+    width: 100%;
+    position: relative;
 }
-.icon-cont {
-    border: 1px solid #8e8f99;
-    border-radius: 4px;
-    width: 264px;
-    height: 112px;
-    background-color: #f4f4fd;
-    gap: 24px;
-    margin-bottom: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.advatages-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+
 }
+
 .icon-adv {
-    fill: transparent;
-    width: 64px;
-    height: 64px;
-}
+    display: none;
+} 
+
 .text {
 font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
-}
+} 
 
 .title
 {
@@ -251,36 +255,46 @@ color: #434455;
 }
 .section-team {
     background: #f4f4fd;
+    padding: 96px 0;
 }
 .team-title {
     margin-bottom: 72px;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
 }
 .team-text {
 text-align: center;
 margin-bottom: 8px;
+font-weight: 400;
+font-size: 16px;
+ line-height: 1.5;
+letter-spacing: 0.02em;
+color: #434455;
 }
 .team-scroll{
 margin-bottom: 8px;
 text-align: center;
+font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
 }
 .team-list {
 display: flex;
-gap: 24px;
+flex-wrap: wrap;
+gap: 72px;
 }
 .team-bottom {
-padding: 32px 0px;
-}
-.portfolio {
- padding: 120px 0 120px 0
-}
-.portf-list{
-display: flex;
-flex-wrap: wrap;
-gap: 48px 24px;
+    padding: 32px 16px;
 }
 
 .team-item {
-flex-basis: calc((100% - 72px) / 4);
 background: #fff;
 border-radius: 0 0 4px 4px;
 box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -304,6 +318,15 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
 
 .team-social-icon {
     fill: #f4f4fd;
+}
+.portfolio {
+    padding: 120px 0 120px 0
+}
+
+.portf-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
 }
 .portf-title {
 margin-bottom: 72px
@@ -683,4 +706,89 @@ border: 1px solid rgba(46, 47, 66, 0.4);
 .footer-btn-icon {
     fill: #ffffff;
     margin-left: 16px;
+}
+@media screen and (min-width: 768px) {
+    
+.container {
+    max-width: 768px;
+    }
+.advatages-list {
+    gap: 72px 32px;
+
+}
+.advatages-item {
+flex-basis: calc((100% - 32px) / 2);
+}
+.team-list {
+    gap: 64px 24px;
+}
+
+.team-item {
+    flex-basis: calc((100% - 24px) / 2);
+}
+
+}
+
+@media screen and (min-width: 768px) and (max-width:1157px) {
+.section-team .container {
+    max-width: 768px;
+}
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+max-width: 1158px;
+padding-left: 15px;
+padding-right: 15px;
+    }
+.advatages {
+    padding: 120px 0;
+}
+.advatages-scr {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.advatages-list {
+    gap: 24px;
+}
+.advatages-item {
+flex-basis: calc((100% - 72px) / 4);
+}
+.advatages-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.icon-cont {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
+    gap: 24px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-adv {
+display: block;
+fill: transparent;
+    width: 64px;
+    height: 64px;
+}
+.section-team {
+    padding: 120px 0;
+}
+.team-list {
+
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+.team-item {
+    max-width: 264px;
+    padding: 0;
+    flex-basis: calc((100% - 72px) / 4);
+}
 }
